@@ -71,7 +71,7 @@ export default function ImageUploader() {
   return (
     <div className="min-h-screen flex items-center justify-center  from-indigo-50 via-purple-50 to-pink-50 p-6">
       {loading && <OverlaySpinner />}
-      <div className="w-full flex max-md:flex-col gap-4 max-w-5xl bg-white/70 backdrop-blur-xl shadow-2xl rounded-2xl p-8 border border-white/30">
+      <div className="w-full flex max-md:flex-col gap-4 max-w-5xl bg-white/70 backdrop-blur-xl shadow-2xl rounded-2xl p-4 border border-white/30">
         <div className="w-full  flex-1">
 
 
@@ -81,7 +81,7 @@ export default function ImageUploader() {
 
           {/* Upload Box */}
           <div
-            className={`flex flex-col items-center justify-center border-2 border-dashed rounded-xl p-8 transition-all duration-300 ${dragOver
+            className={`flex flex-col items-center justify-center border-2 border-dashed rounded-xl p-4 transition-all duration-300 ${dragOver
               ? "border-purple-500 bg-purple-50"
               : "border-gray-300 hover:border-purple-400"
               }`}
@@ -148,7 +148,7 @@ export default function ImageUploader() {
             <h2 className="text-lg font-semibold text-gray-800 mb-2">
               Output
             </h2>
-            <div className="bg-gray-100 p-4 rounded-lg  text-xs text-gray-600 border border-gray-200 h-full">
+            <div className="bg-gray-100 p-2 rounded-lg  text-xs text-gray-600 border border-gray-200 h-full">
               {result && result.map((item, index) => (
                 <StatusListItem key={index} item={item} />
               ))}
