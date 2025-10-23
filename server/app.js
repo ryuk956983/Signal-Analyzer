@@ -6,7 +6,10 @@ const { GoogleGenAI } = require("@google/genai");
 require('dotenv').config();
 
 
-app.use(cors());
+app.use(cors({
+  origin: 'https://signal-analyzer.onrender.com',  
+  credentials: true,                
+}));
 app.use(bodyParser.json({ limit: '10mb' }));
 app.use(bodyParser.urlencoded({ extended: true, limit: '10mb' }));
 
