@@ -47,7 +47,7 @@ export default function ImageUploader() {
 
   const apicall = async () => {
     setloading(true);
-    await axios.post('http://localhost:5000/api/upload', {
+    await axios.post('https://signal-analyzer-backend.onrender.com/api/upload', {
       base64Image: base64,
       imageName: imageName
     })
